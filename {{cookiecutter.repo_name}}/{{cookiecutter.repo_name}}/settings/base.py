@@ -27,6 +27,8 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
          '{{cookiecutter.repo_name}}@{{ cookiecutter.domain }}'))
     MANAGERS = ADMINS
 
+    AUTH_USER_MODEL = 'users.User'
+
     REDIS_HOST = 'localhost'
     REDIS_PORT = 6379
 
@@ -86,7 +88,10 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
         'django.contrib.flatpages',
         'django.contrib.staticfiles',
         'djangosecure',
-        #'django_extensions',
+
+        'django_extensions',
+
+        '{{cookiecutter.package_name}}.users',
     ]
 
     # Absolute filesystem path to the directory that will hold user-uploaded

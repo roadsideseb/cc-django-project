@@ -1,9 +1,13 @@
 postgres:
-  build: orchardup/postgresql
+  image: orchardup/postgresql
   ports:
     - "9932:5432"
+  environment:                                                                                                                                                                                                                                                                
+    POSTGRESQL_DB: dev_db                                                                                                                                                                                                                                                     
+    POSTGRESQL_USER: dev_app                                                                                                                                                                                                                                                  
+    POSTGRESQL_PASS: devpassword
 
 redis:
-  build: orchardup/redis
+  image: orchardup/redis
   ports:
     - "9979:6379"

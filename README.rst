@@ -2,7 +2,8 @@ Django Project Template
 =======================
 
 This is the boiler plate for a Django project using `cookiecutter`_ as the 
-project generator.
+project generator. This template is loosely based on `pydanny's Django
+template`_
 
 
 Create a new project
@@ -18,3 +19,4 @@ The following examples assume that you have ``virtualenvwrapper`` installed::
 
 
 .. _`cookiecutter`: http://cookiecutter.rtfd.org/
+.. _`pydanny's Django template`: https://github.com/pydanny/cookiecutter-django
