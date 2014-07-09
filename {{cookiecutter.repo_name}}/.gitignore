@@ -1,0 +1,6 @@
+*.py[co]
+*.sw[po]
+
+{{cookiecutter.repo_name}}/environment.sh
+{{cookiecutter.repo_name}}/node_modules/
+{{cookiecutter.repo_name}}/public/

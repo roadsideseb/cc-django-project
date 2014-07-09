@@ -1,0 +1,9 @@
+postgres:
+  build: orchardup/postgresql
+  ports:
+    - "9932:5432"
+
+redis:
+  build: orchardup/redis
+  ports:
+    - "9979:6379"
