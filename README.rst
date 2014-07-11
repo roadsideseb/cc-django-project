@@ -3,7 +3,7 @@ Django Project Template
 
 This is the boiler plate for a Django project using `cookiecutter`_ as the 
 project generator. This template is loosely based on `pydanny's Django
-template`_
+template`_.
 
 
 Create a new project
