@@ -3,4 +3,4 @@ from __future__ import absolute_import
 
 from .dev import Dev
 from .prod import Prod
-from .ci import Travis
+from .ci import CI

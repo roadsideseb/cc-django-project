@@ -39,4 +39,4 @@ class Dev(Base):
             'USER': 'dev_app',
             'PASSWORD': 'devpassword',
             'HOST': self.DOCKER_HOST,
-            'PORT': 9900}}
+            'PORT': 9932}}
