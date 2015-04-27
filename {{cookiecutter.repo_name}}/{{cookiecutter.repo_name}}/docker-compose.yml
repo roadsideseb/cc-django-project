@@ -1,0 +1,12 @@
+postgres:
+  image: postgres
+  ports:
+    - "9932:5432"
+  environment:
+    POSTGRES_USER: dev_app
+    POSTGRES_PASSWORD: devpassword
+
+redis:
+  image: redis
+  ports:
+    - "9979:6379"
