@@ -40,7 +40,7 @@ class Dev(Base):
     def DATABASES(self):
         return {'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'dev_db',
+            'NAME': 'dev_app',
             'USER': 'dev_app',
             'PASSWORD': 'devpassword',
             'HOST': self.DOCKER_HOST,
