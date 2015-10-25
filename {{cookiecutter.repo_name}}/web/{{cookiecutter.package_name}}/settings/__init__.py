@@ -2,5 +2,5 @@
 from __future__ import absolute_import
 
 from .dev import Dev
-from .prod import Prod
+from .prod import Production
 from .ci import CI

@@ -1,1 +1,1 @@
-web: uwsgi --chdir=/app/{{cookiecutter.repo_name}} --http :$PORT --wsgi {{cookiecutter.package_name}}.wsgi
+web: uwsgi --static-map /static=/app/{{cookiecutter.package_name}}/public/static --chdir=/app --http :$PORT --wsgi {{cookiecutter.package_name}}.wsgi

@@ -5,7 +5,7 @@ import sys
 sys.stdout = sys.stderr
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{cookiecutter.package_name}}.settings')
 os.environ.setdefault('DJANGO_CONFIGURATION', 'Prod')
 
 from configurations.wsgi import get_wsgi_application

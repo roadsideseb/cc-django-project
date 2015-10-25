@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
 
                     </button>
-                    <a class="navbar-brand" href="/">{% trans "Haiku" %}</a>
+                    <a class="navbar-brand" href="/">{% trans "Project" %}</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -44,11 +44,9 @@
                         <li class="active"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
 
                         {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'users:detail' request.user.username %}">{% trans "My Profile" %}</a></li>
-                            <li><a href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
+                            <li><a href="{% url 'admin:logout' %}">{% trans "Logout" %}</a></li>
                         {% else %}
-                            <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
-                            <li><a href="{% url 'account_login' %}">{% trans "Log In" %}</a></li>
+                            <li><a href="{% url 'admin:login' %}">{% trans "Log In" %}</a></li>
                         {% endif %}
                     </ul>
                 </div>

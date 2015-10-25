@@ -8,7 +8,7 @@ from configurations import importer
 from django_webtest import DjangoTestApp, WebTestMixin
 
 os.environ.setdefault("DJANGO_CONFIGURATION", "Dev")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{cookiecutter.package_name}}.settings")
 
 
 def pytest_configure():

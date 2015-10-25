@@ -1,0 +1,20 @@
+#web:
+#  build: .
+#  command: python manage.py runserver_plus 0:8000 #bash -c "newrelic-admin run-program uwsgi --http $PORT --ini uwsgi/production.ini"
+#  working_dir: /app/user/app
+#  volumes:
+#    - '.:/app/user'
+#  environment:
+#    PORT: 8000
+#    DJANGO_SECRET_KEY: thisisnotarealsecret
+#    DATABASE_URL: 'postgres://postgres:@herokuPostgresql:5432/postgres'
+#  ports:
+#    - '8000:8000'
+#  links:
+#    - herokuPostgresql
+
+
+herokuPostgresql:
+  image: postgres
+  ports:
+    - '9932:5432'
