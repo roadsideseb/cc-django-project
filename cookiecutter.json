@@ -3,6 +3,7 @@
   "package_name": "package_name",
   "project_title": "The Project Titel",
   "domain": "roadsi.de",
+  "subdomain": "heroku-app-subdomain",
   "github_user": "elbaschid",
   "author": "Sebastian Vetter",
   "year": "2015",

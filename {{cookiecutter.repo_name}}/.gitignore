@@ -1,8 +1,7 @@
 *.py[co]
-*.sw[po]
+*.sw[a-z]
 
 .env
 
-{{cookiecutter.repo_name}}/environment.sh
 {{cookiecutter.repo_name}}/node_modules/
 {{cookiecutter.repo_name}}/public/

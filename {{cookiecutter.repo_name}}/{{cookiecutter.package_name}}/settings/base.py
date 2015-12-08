@@ -29,8 +29,14 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
 
     AUTH_USER_MODEL = 'users.User'
 
-    REDIS_HOST = 'localhost'
-    REDIS_PORT = 6379
+    CACHES = values.CacheURLValue('locmem:///')
+
+    DATABASE_DICT = values.DatabaseURLValue()
+
+    @property
+    def DATABASES(self):
+        self.DATABASE_DICT['default']['CONN_MAX_AGE'] = None
+        return self.DATABASE_DICT
 
     TIME_ZONE = 'Australia/Melbourne'
     # If you set this to False, Django will make some optimizations so as not
@@ -142,20 +148,3 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
     RAVEN_CONFIG = {
         'dsn': values.Value('', environ_name='RAVEN_DSN')
     }
-
-    @property
-    def CACHE(self):
-        location = '{host}:{port}'.format(
-            host=self.REDIS_HOST, port=self.REDIS_PORT)
-        return {'default': {
-            'BACKEND': 'redis_cache.RedisCache', 'LOCATION': location}}
-
-    @property
-    def DATABASES(self):
-        return {'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': '{{cookiecutter.package_name}}_db',  # noqa
-            'USER': '{{cookiecutter.package_name}}_app',  # noqa
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': ''}}

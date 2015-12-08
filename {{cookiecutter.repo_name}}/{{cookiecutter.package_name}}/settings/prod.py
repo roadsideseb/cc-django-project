@@ -10,6 +10,8 @@ class Production(Base):
     DEBUG = False
     TEMPLATE_DEBUG = False
 
+    STATIC_ROOT = '/app/static'
+
     EMAIL_SUBJECT_PREFIX = '[{{cookiecutter.repo_name}}][Prod] '
 
     INSTALLED_APPS = Base.INSTALLED_APPS + [
@@ -17,7 +19,7 @@ class Production(Base):
     ]
 
     DATABASES = values.DatabaseURLValue()
-    ALLOWED_HOSTS = ['{{cookiecutter.repo_name}}.herokuapp.com']
+    ALLOWED_HOSTS = ['{{cookiecutter.subdomain}}.herokuapp.com']
 
     RAVEN_DSN = values.Value()
 
