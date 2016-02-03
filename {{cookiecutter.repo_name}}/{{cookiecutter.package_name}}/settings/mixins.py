@@ -21,10 +21,6 @@ class DjangoLoggingMixin(object):
     }
 
     HANDLERS = {
-        'null': {
-            'level': 'DEBUG',
-            'class': 'django.utils.log.NullHandler',
-        },
         'sentry': {
             'level': 'ERROR',
             'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',  # noqa
