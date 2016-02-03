@@ -6,7 +6,7 @@
   "subdomain": "heroku-app-subdomain",
   "github_user": "elbaschid",
   "author": "Sebastian Vetter",
-  "year": "2015",
+  "year": "2016",
   "_copy_without_render": [
     "*.html"
   ]
