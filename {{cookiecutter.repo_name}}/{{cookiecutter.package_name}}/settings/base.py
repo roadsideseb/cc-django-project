@@ -81,7 +81,6 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-        'djangosecure.middleware.SecurityMiddleware',
     ]
 
     INSTALLED_APPS = [
@@ -93,7 +92,6 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
         'django.contrib.admin',
         'django.contrib.flatpages',
         'django.contrib.staticfiles',
-        'djangosecure',
 
         'django_extensions',
         'storages',
