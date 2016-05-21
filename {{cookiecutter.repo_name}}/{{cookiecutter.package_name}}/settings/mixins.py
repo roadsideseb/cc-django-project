@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 import copy
 
+from configurations import values
+
 
 class DjangoLoggingMixin(object):
+    LOGLEVEL = values.Value(default='INFO', environ_prefix='')
+
     FORMATTERS = {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'  # noqa
@@ -79,7 +83,12 @@ class DjangoLoggingMixin(object):
         loggers.update(self.get_project_loggers())
         return {
             'version': 1,
-            'disable_existing_logger': False,
+            'disable_existing_logger': True,
+            'root': {
+                'level': self.LOGLEVEL,
+                'handlers': ['console'],
+                'formatter': 'verbose',
+            },
             'formatters': self.FORMATTERS,
             'filters': self.FILTERS,
             'handlers': self.HANDLERS,
