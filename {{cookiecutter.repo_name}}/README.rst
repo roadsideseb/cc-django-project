@@ -2,8 +2,8 @@
 ===============================
 
 
-.. image:: https://travis-ci.com/{{cookiecutter.github_name}}/{{cookiecutter.repo_name}}.svg
-    :target: https://travis-ci.com/{{cookiecutter.github_name}}/{{cookiecutter.repo_name}}
+.. image:: https://travis-ci.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}.svg
+    :target: https://travis-ci.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}
 
 
 Set Up Development Environment
@@ -134,7 +134,7 @@ plugin::
 
 Running the full test suite with PEP8 checking and coverage report, run::
 
-    $ py.test --pep8 --cov {{ cookiecutter.project_code }} --cov-report html
+    $ py.test --pep8 --cov {{ cookiecutter.package_name }} --cov-report html
 
 which will create a ``htmlcov`` directory containing nicely formatted coverage
 reports that you can look at in the browser.
