@@ -20,43 +20,39 @@ The next thing to do is to install all the requirements for the project. Since
 we are setting up the development environment and will require additional
 packages for that, we'll use the ``dev.txt`` requirement file::
 
-    $ pip install -r requirements/dev.txt
+    $ pip install -r requirements-dev.txt
 
 
-Containerized Services
-~~~~~~~~~~~~~~~~~~~~~~
+Setup Docker & Docker Compose
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First of all, we need to install ``fig`` on the system using the provided
-binaries. For Mac OSX run::
+We are using **Docker Compose** to run our development environment. If you
+haven't worked with it before, you should take a look at `the documentation on
+Docker Compose <https://docs.docker.com/compose/overview/>`__.
 
-    $ curl -L https://github.com/orchardup/fig/releases/download/0.4.2/darwin > /usr/local/bin/fig
-    $ chmod +x /usr/local/bin/fig
+The first thing we have to do is to install Docker and the tool
+``docker-compose``. If you are on **a Mac**, you want to install theu
+`Docker Toolbox <https://docs.docker.com/mac/step_one/>`__ or the the new
+`Docker for Mac <https://beta.docker.com/>`__.
 
-Or on Linux::
+Or **on Linux** check out the `install section
+<https://docs.docker.com/compose/install/>`__ in the docs on how to set it up.
 
-    $ curl -L https://github.com/orchardup/fig/releases/download/0.4.2/linux > /usr/local/bin/fig
-    $ chmod +x /usr/local/bin/fig
 
-With docker installed on your system, we start with building the development
-boxes that live in a ``docker`` folder of the project. Fig builds all the boxes
-by running::
+Running the Dev Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    $ fig build
+With Docker Engine and Compose installed, we can build and run the development
+environment::
 
-The full set up of all containers is started similar to vagrant by executing::
+    $ docker-compose build
 
-    $ fig up
+The full set up of all containers is started by executing::
+
+    $ docker-compose up
 
 which will build containers (if required), start all of them and attach to 
-their output. The containers can be shut down with ``Ctrl + C``. For additional
-commands provided by ``fig`` `checkout the fig documentation`_.
-
-
-.. _`fig`: http://orchardup.github.io/fig/index.html
-.. _`vagrant`: http://vagrantup.com/
-.. _`docker`: http://docs.docker.com/
-.. _`boot2docker`: http://docs.docker.com/installation/mac/
-.. _`checkout the fig documentation`: http://orchardup.github.io/fig/cli.html
+their output. The containers can be shut down with ``Ctrl + C``.
 
 
 Django Configuration
@@ -69,7 +65,7 @@ uses the following profiles:
 
 
 +-----------+-------------------------------------------+-----------------------+
-| **Local** | Local development setup.                  | ``settings/local.py`` |
+| **Dev**   | Local development setup.                  | ``settings/dev.py``   |
 +-----------+-------------------------------------------+-----------------------+
 | **CI**    | Used for CI-specific settings.            | ``settings/ci.py``    |
 +-----------+-------------------------------------------+-----------------------+
