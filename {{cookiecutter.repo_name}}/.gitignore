@@ -3,5 +3,7 @@
 
 .env
 
+.cache/
+
 {{cookiecutter.repo_name}}/node_modules/
 {{cookiecutter.repo_name}}/public/
