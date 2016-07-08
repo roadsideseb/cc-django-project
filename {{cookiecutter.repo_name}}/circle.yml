@@ -1,37 +1,24 @@
-language: python
+machine:
+    python:
+        version: 3.5.1
+    environment:
+        DATABASE_URL: postgresql://ubuntu@127.0.0.1:5432/circle_test
+        REDIS_URL: redis://127.0.0.1:6379/0
+        DJANGO_SECRET_KEY: secret key just for testing
+    services:
+        - redis
+        - postgresql
 
-python:
-  - '3.4'
+dependencies:
+    pre:
+        - pip install -r requirements-dev.txt
 
-addons:
-    postgresql: "9.3"
-
-services:
-    - redis-server
-
-cache:
-  directories:
-    - $HOME/.pip-cache
-
-env:
-  global:
-    - DJANGO_SECRET_KEY='secret key just for testing'
-    - DJANGO_CONFIGURATION='Travis'
-    - PIP_OPTS='--download-cache=$HOME/.pip-cache'
-  matrix:
-    - PYTEST_OPTS="--pep8 --cov {{cookiecutter.package_name}}"
-    - PYTEST_OPTS="-m browser"
-
-before_install:
-  - cd {{cookiecutter.repo_name}}
-
-install:
-  - pip install -r deploy/requirements/ci.txt $PIP_OPTS
-
-before_script:
-  - psql -U postgres -c "create extension postgis"
-  - psql -U postgres -c "create user test_app with superuser password 'testpassword';"
-  - psql -U postgres -c "create database test_db;"
-
-script:
-  - py.test $PYTEST_OPTS
+test:
+    pre:
+        - psql -U postgres -c "create extension postgis"
+        - psql -U postgres -c "create user test_app with superuser password 'testpassword';"
+        - psql -U postgres -c "create database test_db;"
+        - python manage.py collectstatic --noinput
+    override:
+        - py.test --cov {{cookiecutter.package_name}}
+        - flake8 {{cookiecutter.package_name}}
