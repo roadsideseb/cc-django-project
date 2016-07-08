@@ -5,5 +5,5 @@
 
 .cache/
 
-{{cookiecutter.repo_name}}/node_modules/
-{{cookiecutter.repo_name}}/public/
+{{cookiecutter.package_name}}/node_modules/
+{{cookiecutter.package_name}}/public/
