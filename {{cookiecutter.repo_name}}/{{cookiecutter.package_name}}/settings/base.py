@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+e -*- coding: utf-8 -*-
 from __future__ import absolute_import
 import os
 
@@ -84,6 +84,7 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
     ]
 
     INSTALLED_APPS = [
+        'registration',
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
