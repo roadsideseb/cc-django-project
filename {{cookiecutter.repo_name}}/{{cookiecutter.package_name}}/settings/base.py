@@ -100,6 +100,14 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
         '{{cookiecutter.package_name}}.users',
     ]
 
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.postmarkapp.com'
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = values.Value(environ_prefix='',
+                                   environ_name='POSTMARK_API_TOKEN')
+    EMAIL_HOST_PASSWORD = values.Value(environ_prefix='',
+                                   environ_name='POSTMARK_API_TOKEN')
+
     # Absolute filesystem path to the directory that will hold user-uploaded
     # files.
     # Example: "/home/media/media.lawrence.com/media/"
