@@ -17,10 +17,14 @@ class Dev(Base):
     ] + Base.MIDDLEWARE_CLASSES
     INTERNAL_IPS = ['127.0.0.1', '::1']
 
-    # Disable the cached template loading during development
-    TEMPLATE_LOADERS = (
-        'django.template.loaders.filesystem.Loader',
-        'django.template.loaders.app_directories.Loader')
+    @property
+    def TEMPLATES(self):
+        Base.TEMPLATES[0]['OPTIONS']['debug'] = True
+        Base.TEMPLATES[0]['OPTIONS']['loaders'] = (
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+        )
+        return Base.TEMPLATES    # Disable the cached template loading during development
 
     # We just want to see emails displayed in the console
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

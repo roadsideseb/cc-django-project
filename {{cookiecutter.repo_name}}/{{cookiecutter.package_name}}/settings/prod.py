@@ -1,16 +1,13 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
-
 from configurations import values
 
-from .base import Base
+from .base import Base, project_path
 
 
 class Production(Base):
     DEBUG = False
     TEMPLATE_DEBUG = False
 
-    STATIC_ROOT = '/app/static'
+    STATIC_ROOT = project_path('../staticfiles')
 
     EMAIL_SUBJECT_PREFIX = '[{{cookiecutter.repo_name}}][Prod] '
 
