@@ -1,5 +1,3 @@
-e -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import os
 
 from configurations import Configuration, values
@@ -23,8 +21,8 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
     TEMPLATE_DEBUG = DEBUG
 
     ADMINS = (
-        ('Alerts',
-         '{{cookiecutter.repo_name}}@{{ cookiecutter.domain }}'))
+        ('Alerts', '{{cookiecutter.repo_name}}@{{ cookiecutter.domain }}'),
+    )
     MANAGERS = ADMINS
 
     AUTH_USER_MODEL = 'users.User'
@@ -38,7 +36,7 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
         self.DATABASE_DICT['default']['CONN_MAX_AGE'] = None
         return self.DATABASE_DICT
 
-    TIME_ZONE = 'Australia/Melbourne'
+    TIME_ZONE = 'American/Vancouver'
     # If you set this to False, Django will make some optimizations so as not
     # to load the internationalization machinery.
     USE_I18N = True
@@ -106,7 +104,7 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
     EMAIL_HOST_USER = values.Value(environ_prefix='',
                                    environ_name='POSTMARK_API_TOKEN')
     EMAIL_HOST_PASSWORD = values.Value(environ_prefix='',
-                                   environ_name='POSTMARK_API_TOKEN')
+                                       environ_name='POSTMARK_API_TOKEN')
 
     # Absolute filesystem path to the directory that will hold user-uploaded
     # files.
