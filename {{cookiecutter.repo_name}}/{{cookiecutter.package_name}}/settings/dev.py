@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-from configurations import values
-
 from . base import Base
 
 
 class Dev(Base):
     DEBUG = True
-    TEMPLATE_DEBUG = True
 
     DEBUG_TOOLBAR_PATCH_SETTINGS = False
     INSTALLED_APPS = Base.INSTALLED_APPS + [
@@ -24,7 +20,7 @@ class Dev(Base):
             'django.template.loaders.filesystem.Loader',
             'django.template.loaders.app_directories.Loader',
         )
-        return Base.TEMPLATES    # Disable the cached template loading during development
+        return Base.TEMPLATES  # Disable the cached template loading
 
     # We just want to see emails displayed in the console
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
