@@ -1,4 +1,4 @@
-Django==2.0
+Django==2.0.1
 
 django-configurations==2.0
 dj-database-url==0.4.2
