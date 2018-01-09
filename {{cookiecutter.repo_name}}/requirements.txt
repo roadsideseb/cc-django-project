@@ -22,4 +22,4 @@ raven==6.4.0
 django-redis-cache==1.7.1
 
 uwsgi==2.0.15
-newrelic==2.98.0.81
+newrelic==2.100.0.84
