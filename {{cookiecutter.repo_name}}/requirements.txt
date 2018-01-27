@@ -15,7 +15,7 @@ Pillow==5.0.0
 # Postgres client driver
 psycopg2==2.7.3.2
 
-structlog==17.2.0
+structlog==18.1.0
 raven==6.5.0
 
 # caching backend
