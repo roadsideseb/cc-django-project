@@ -16,7 +16,7 @@ Pillow==5.0.0
 psycopg2==2.7.4
 
 structlog==18.1.0
-raven==6.5.0
+raven==6.6.0
 
 # caching backend
 django-redis-cache==1.7.1
