@@ -35,7 +35,7 @@ class Base(mixins.DjangoLoggingMixin, Configuration):
         self.DATABASE_DICT['default']['CONN_MAX_AGE'] = None
         return self.DATABASE_DICT
 
-    TIME_ZONE = 'American/Vancouver'
+    TIME_ZONE = 'America/Edmonton'
     # If you set this to False, Django will make some optimizations so as not
     # to load the internationalization machinery.
     USE_I18N = True

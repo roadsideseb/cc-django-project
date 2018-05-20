@@ -5,7 +5,6 @@ from .base import Base, project_path
 
 class Production(Base):
     DEBUG = False
-    TEMPLATE_DEBUG = False
 
     STATIC_ROOT = project_path('../staticfiles')
 
