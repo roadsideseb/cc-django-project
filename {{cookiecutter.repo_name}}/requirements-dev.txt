@@ -23,7 +23,7 @@ splinter==0.8.0
 pytest==3.6.2
 pytest-cache==1.0
 pytest-cov==2.5.1
-pytest-django==3.3.0
+pytest-django==3.3.2
 pytest-splinter==1.9.1
 
 # Coverage testing
