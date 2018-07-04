@@ -20,7 +20,7 @@ selenium==3.13.0
 splinter==0.8.0
 
 # pytest & plugins
-pytest==3.6.2
+pytest==3.6.3
 pytest-cache==1.0
 pytest-cov==2.5.1
 pytest-django==3.3.2
