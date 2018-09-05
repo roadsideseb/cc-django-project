@@ -15,7 +15,7 @@ Pillow==5.2.0
 # Postgres client driver
 psycopg2==2.7.5
 
-structlog==18.1.0
+structlog==18.2.0
 raven==6.9.0
 
 
