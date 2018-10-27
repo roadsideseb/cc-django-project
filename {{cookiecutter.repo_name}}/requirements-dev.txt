@@ -5,7 +5,7 @@ Werkzeug==0.14.1
 django-debug-toolbar==1.10.1
 
 # python shell
-ipython==7.0.1
+ipython==7.1.0
 
 # documentation
 Sphinx==1.8.1
