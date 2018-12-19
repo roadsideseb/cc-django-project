@@ -16,7 +16,7 @@ Pillow==5.3.0
 psycopg2==2.7.6.1
 
 structlog==18.2.0
-raven==6.9.0
+raven==6.10.0
 
 
 # caching backend
