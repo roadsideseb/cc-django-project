@@ -10,7 +10,7 @@ ipython==7.2.0
 # documentation
 Sphinx==1.8.4
 docutils==0.14
-sphinx-rtd-theme==0.4.2
+sphinx-rtd-theme==0.4.3
 
 # Testing
 WebTest==2.0.33
