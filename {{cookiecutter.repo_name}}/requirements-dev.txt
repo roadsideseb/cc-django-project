@@ -24,7 +24,7 @@ pytest==4.2.1
 pytest-cache==1.0
 pytest-cov==2.6.1
 pytest-django==3.4.7
-pytest-splinter==2.0.0
+pytest-splinter==2.0.1
 
 # Coverage testing
 coverage==4.5.2
