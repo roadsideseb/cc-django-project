@@ -20,7 +20,7 @@ raven==6.10.0
 
 
 # caching backend
-django-redis-cache==1.8.1
+django-redis-cache==2.0.0
 
 uwsgi==2.0.18
 newrelic==4.14.0.115
