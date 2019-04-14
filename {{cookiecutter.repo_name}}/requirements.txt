@@ -13,7 +13,7 @@ django-registration-redux==2.6
 Pillow==6.0.0
 
 # Postgres client driver
-psycopg2==2.8.1
+psycopg2==2.8.2
 
 structlog==19.1.0
 raven==6.10.0
