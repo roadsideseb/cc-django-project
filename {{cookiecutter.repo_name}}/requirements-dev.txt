@@ -17,7 +17,7 @@ WebTest==2.0.33
 django-webtest==1.9.6
 factory-boy==2.12.0
 selenium==3.141.0
-splinter==0.10.0
+splinter==0.11.0
 
 # pytest & plugins
 pytest==4.6.3
