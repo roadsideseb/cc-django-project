@@ -27,7 +27,7 @@ pytest-django==3.5.1
 pytest-splinter==2.0.1
 
 # Coverage testing
-coverage==4.5.3
+coverage==4.5.4
 coveralls==1.8.1
 
 honcho
