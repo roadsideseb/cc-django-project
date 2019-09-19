@@ -1,7 +1,7 @@
 -r requirements.txt
 
 # development tools
-Werkzeug==0.15.6
+Werkzeug==0.16.0
 django-debug-toolbar==2.0
 
 # python shell
