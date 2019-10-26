@@ -8,7 +8,7 @@ django-debug-toolbar==2.0
 ipython==7.9.0
 
 # documentation
-Sphinx==2.2.0
+Sphinx==2.2.1
 docutils==0.15.2
 sphinx-rtd-theme==0.4.3
 
