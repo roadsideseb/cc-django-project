@@ -28,7 +28,7 @@ pytest-splinter==2.0.1
 
 # Coverage testing
 coverage==5.0.1
-coveralls==1.9.2
+coveralls==1.10.0
 
 honcho
 flake8
