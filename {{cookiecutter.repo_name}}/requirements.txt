@@ -1,26 +1,26 @@
-Django==2.0.5
+Django==3.0.7
 
-django-configurations==2.0
+django-configurations==2.2
 dj-database-url==0.5.0
-django-cache-url==3.0.0
-django-extensions==2.0.7
+django-cache-url==3.1.2
+django-extensions==3.0.1
 
-django-braces==1.13.0
+django-braces==1.14.0
 django-storages-redux==1.3.3
-django-registration-redux==2.4
+django-registration-redux==2.8
 
 # images
-Pillow==5.1.0
+Pillow==7.2.0
 
 # Postgres client driver
-psycopg2==2.7.4
+psycopg2==2.8.5
 
-structlog==18.1.0
-raven==6.8.0
+structlog==20.1.0
+raven==6.10.0
 
 
 # caching backend
-django-redis-cache==1.7.1
+django-redis-cache==2.1.1
 
-uwsgi==2.0.17
-newrelic==3.2.1.93
+uwsgi==2.0.19.1
+newrelic==5.14.1.144
