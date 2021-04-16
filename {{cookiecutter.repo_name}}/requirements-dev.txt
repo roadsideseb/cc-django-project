@@ -2,7 +2,7 @@
 
 # development tools
 Werkzeug==0.14.1
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 
 # python shell
 ipython==6.4.0
