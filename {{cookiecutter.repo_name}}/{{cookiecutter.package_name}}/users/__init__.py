@@ -1,1 +1,1 @@
-default_app_config = '{{cookiecutter.package_name}}.users.apps.UsersAppConfig'
+default_app_config = "{{cookiecutter.package_name}}.users.apps.UsersAppConfig"

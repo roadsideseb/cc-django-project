@@ -8,7 +8,9 @@ from configurations import importer
 from django_webtest import DjangoTestApp, WebTestMixin
 
 os.environ.setdefault("DJANGO_CONFIGURATION", "Dev")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{cookiecutter.package_name}}.settings")
+os.environ.setdefault(
+    "DJANGO_SETTINGS_MODULE", "{{cookiecutter.package_name}}.settings"
+)
 
 
 def pytest_configure():
@@ -16,7 +18,7 @@ def pytest_configure():
     django.setup()
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def webtest(request, transactional_db):
     """
     Provide the "app" object from WebTest as a fixture

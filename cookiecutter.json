@@ -2,11 +2,11 @@
   "repo_name":"the-repo",
   "package_name": "package_name",
   "project_title": "The Project Titel",
-  "domain": "roadsi.de",
+  "domain": "roadside.dev",
   "subdomain": "heroku-app-subdomain",
-  "github_user": "elbaschid",
-  "author": "Sebastian Vetter",
-  "year": "2017",
+  "github_user": "roadsideseb",
+  "author": "Seb Vetter",
+  "year": "2022",
   "_copy_without_render": [
     "*.html"
   ]

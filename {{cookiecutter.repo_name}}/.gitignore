@@ -2,8 +2,10 @@
 *.sw[a-z]
 
 .env
+.DS_Store
 
 .cache/
+.pytest_cache/
 
-{{cookiecutter.package_name}}/node_modules/
-{{cookiecutter.package_name}}/public/
+exceptional_humans/node_modules/
+exceptional_humans/public/
